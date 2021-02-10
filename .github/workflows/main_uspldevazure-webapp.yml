@@ -31,4 +31,4 @@ jobs:
         app-name: 'uspldevazure-webapp'
         slot-name: 'production'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_5f72f990c85d4f479216e7a211ea999b }}
-        package: .
+        package: ./dist/webapp
