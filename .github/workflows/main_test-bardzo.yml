@@ -23,12 +23,12 @@ jobs:
     - name: npm install, build, and test
       run: |
         npm install
-        npm run build --if-present
+        npm run build --prod
 
     - name: 'Deploy to Azure Web App'
       uses: azure/webapps-deploy@v2
       with:
-        app-name: 'test-bardzo'
+        app-name: 'usPlDevAzure-webapp'
         slot-name: 'production'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_0ce53c6ecfaf4a0f90a19377cfb22c25 }}
         package: .
